@@ -9,8 +9,8 @@
 ## Installation
 
 Update composer.json file with new dependency
-```bash
-"repositories": [
+```json
+    "repositories": [
         {
             "name" : "channels-group-plugin", 
             "type" : "git",

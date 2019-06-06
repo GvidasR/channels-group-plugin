@@ -1,0 +1,11 @@
+gvidasr_channels_group_plugin:
+  ui:
+    channel_group: Channel group
+    channel_groups: Channel groups
+    new_channel_group: New channel group
+    shared_basket: Shared basket
+    channel_group_name: Channel group name
+    code: Code
+  validation:
+    unique: Field must be unique
+    not_blank: Field cannot be empty

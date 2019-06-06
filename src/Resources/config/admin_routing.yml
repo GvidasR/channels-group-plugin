@@ -1,0 +1,16 @@
+gvidasr_channels_group_plugin_channel_group:
+  resource: |
+    alias: gvidasr_channels_group_plugin.channel_group
+    section: admin
+    templates: SyliusAdminBundle:Crud
+    grid: gvidasr_channels_group_plugin_channel_group
+    except: ['show','delete']
+    redirect: update
+    permission: true
+    vars:
+        all:
+          templates:
+            form: "@GvidasrChannelsGroupPlugin/ChannelGroup/Crud/_form.html.twig"
+        index:
+            icon: folder open
+  type: sylius.resource

@@ -1,0 +1,11 @@
+Gvidasr\ChannelsGroupPlugin\Entity\Channel:
+  type: entity
+  table: sylius_channel
+  manyToOne:
+    channelGroup:
+      targetEntity: ChannelGroup
+      inversedBy: channels
+      joinColumn:
+        name: channel_group_id
+        referencedColumnName: id
+

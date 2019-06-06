@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Gvidasr\ChannelsGroupPlugin
+        psr4_prefix: Gvidasr\ChannelsGroupPlugin

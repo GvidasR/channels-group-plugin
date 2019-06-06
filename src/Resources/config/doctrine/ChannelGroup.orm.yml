@@ -1,0 +1,23 @@
+Gvidasr\ChannelsGroupPlugin\Entity\ChannelGroup:
+  type: entity
+  table: gvidasr_channels_group_plugin_channel_group
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    enabled:
+      column: enabled
+      type: boolean
+    name:
+      type: string
+      length: 255
+      nullable: false
+    sharedBasket:
+      type: boolean
+  oneToMany:
+    channels:
+      targetEntity: Channel
+      mappedBy: channelGroup
+

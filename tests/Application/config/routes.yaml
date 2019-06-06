@@ -1,0 +1,3 @@
+gvidasr_channels_groups_plugin_admin:
+    resource: "@GvidasrChannelsGroupPlugin/Resources/config/admin_routing.yml"
+    prefix: /admin

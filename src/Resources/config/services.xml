@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Gvidasr\ChannelsGroupPlugin\Form\Type\ChannelGroupType">
+            <argument>%gvidasr_channels_group_plugin.model.channel_group.class%</argument>
+            <tag name="form.type" />
+        </service>
+        <service id="Gvidasr\ChannelsGroupPlugin\Form\Extension\ChannelTypeExtension">
+            <tag name="form.type_extension" extended_type="Sylius\Bundle\ChannelBundle\Form\Type\ChannelType" />
+        </service>
+        <service id="Gvidasr\ChannelsGroupPlugin\Menu\AdminMenuListener" class="Gvidasr\ChannelsGroupPlugin\Menu\AdminMenuListener">
+            <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="addAdminMenuItems"/>
+        </service>
+        <service id="sylius.context.cart.session_and_channel_based" class="Gvidasr\ChannelsGroupPlugin\Context\SessionAndChannelBasedCartContext" public="true">
+            <tag name="sylius.context.cart" priority="-777"/>
+            <argument type="service" id="sylius.storage.cart_session"/>
+            <argument type="service" id="sylius.context.channel.cached"/>
+        </service>
+    </services>
+</container>

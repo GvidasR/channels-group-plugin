@@ -1,0 +1,45 @@
+sylius_grid:
+  grids:
+    gvidasr_channels_group_plugin_channel_group:
+      driver:
+        name: doctrine/orm
+        options:
+          class: "%gvidasr_channels_group_plugin.model.channel_group.class%"
+      sorting:
+        name: asc
+      fields:
+        name:
+          type: string
+          label: gvidasr_channels_group_plugin.ui.channel_group
+          sortable: ~
+        shared_basket:
+          label: gvidasr_channels_group_plugin.ui.shared_basket
+          type: twig
+          options:
+            template: "@SyliusUi/Grid/Field/yesNo.html.twig"
+        enabled:
+          label: sylius.form.channel.enabled
+          type: twig
+          options:
+            template: "@SyliusUi/Grid/Field/yesNo.html.twig"
+      actions:
+        main:
+          create:
+            type: create
+        item:
+          update:
+            type: update
+
+sylius_channel:
+  resources:
+    channel:
+      classes:
+        model: Gvidasr\ChannelsGroupPlugin\Entity\Channel
+
+sylius_resource:
+  resources:
+    gvidasr_channels_group_plugin.channel_group:
+      driver: doctrine/orm
+      classes:
+        model: Gvidasr\ChannelsGroupPlugin\Entity\ChannelGroup
+        form:  Gvidasr\ChannelsGroupPlugin\Form\Type\ChannelGroupType

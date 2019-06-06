@@ -1,0 +1,5 @@
+Gvidasr\ChannelsGroupPlugin\Entity\ChannelGroup:
+  properties:
+    name:
+      - NotBlank:
+          message: 'gvidasr_channels_group_plugin.validation.not_blank'

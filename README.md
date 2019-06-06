@@ -42,9 +42,17 @@ return [
 ]
 ```
 
-Include plugin configs in your config/packages/_sylius.yaml file:
+Include plugin configs in your config/services.yaml file:
 ```yaml
-- { resource: "@GvidasrChannelsGroupPlugin/Resources/config/app/config.yml" }
+imports:
+    - { resource: "@GvidasrChannelsGroupPlugin/Resources/config/app/config.yml" }
+```
+
+Include plugin routes in your config/routes.yaml file:
+```yaml
+gvidasr_channels_groups_plugin_admin:
+    resource: "@GvidasrChannelsGroupPlugin/Resources/config/admin_routing.yml"
+    prefix: /admin
 ```
 
 ## Testing

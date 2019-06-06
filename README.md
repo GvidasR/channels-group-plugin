@@ -52,3 +52,5 @@ yarn run gulp
 php bin/console sylius:install --env test
 php bin/console server:start --env test
 ```
+
+If `yarn run gulp` command fails try creating new `node_modules` symbolic link

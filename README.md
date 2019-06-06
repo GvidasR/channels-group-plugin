@@ -38,7 +38,7 @@ php bin/console doctrine:migrations:migrate
 Add plugin dependencies to your config/bundles.php file:
 ```php
 return [
-    Gvidasr\ChannelsGroupPlugin\ChannelsGroupPlugin::class => ['all' => true],
+    Gvidasr\ChannelsGroupPlugin\GvidasrChannelsGroupPlugin::class => ['all' => true],
 ]
 ```
 

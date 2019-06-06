@@ -42,6 +42,11 @@ return [
 ]
 ```
 
+Include plugin configs in your config/packages/_sylius.yaml file:
+```yaml
+- { resource: "@GvidasrChannelsGroupPlugin/Resources/config/app/config.yml" }
+```
+
 ## Testing
 
 ```bash
